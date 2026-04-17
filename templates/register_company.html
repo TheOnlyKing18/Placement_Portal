@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Company Registration – PlaceHub{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8 col-lg-7">
+    <div class="pp-card">
+      <div class="pp-card-icon-header" style="background: linear-gradient(135deg,#ff6b35,#f7c59f)"><i class="bi bi-building-add fs-1"></i></div>
+      <div class="card-body p-4 p-md-5">
+        <h4 class="fw-bold mb-1">Company Registration</h4>
+        <p class="text-muted small mb-4">Register your company — admin will review and approve your account.</p>
+        <form method="POST">
+          <div class="row g-3">
+            <div class="col-12"><h6 class="pp-section-label">Account Details</h6></div>
+            <div class="col-md-6"><label class="form-label pp-label">Official Email *</label><input type="email" name="email" class="form-control" required></div>
+            <div class="col-md-6"><label class="form-label pp-label">Password *</label><input type="password" name="password" class="form-control" required minlength="6"></div>
+            <div class="col-12 mt-2"><h6 class="pp-section-label">Company Info</h6></div>
+            <div class="col-md-6"><label class="form-label pp-label">Company Name *</label><input type="text" name="name" class="form-control" required></div>
+            <div class="col-md-6"><label class="form-label pp-label">Industry</label><select name="industry" class="form-select"><option value="">Select</option><option>IT</option><option>Product</option><option>Finance</option><option>Consulting</option><option>Manufacturing</option><option>Healthcare</option><option>Other</option></select></div>
+            <div class="col-12"><label class="form-label pp-label">Website</label><input type="url" name="website" class="form-control"></div>
+            <div class="col-12"><label class="form-label pp-label">Description</label><textarea name="description" class="form-control" rows="3"></textarea></div>
+            <div class="col-12 mt-2"><h6 class="pp-section-label">Contact Person</h6></div>
+            <div class="col-md-6"><label class="form-label pp-label">HR Name</label><input type="text" name="contact_person" class="form-control"></div>
+            <div class="col-md-6"><label class="form-label pp-label">Phone</label><input type="tel" name="contact_phone" class="form-control"></div>
+            <div class="col-12 mt-2"><button type="submit" class="btn pp-btn-primary px-5"><i class="bi bi-building-check me-2"></i>Submit for Approval</button><a href="{{ url_for('login') }}" class="btn btn-link ms-2">Already have an account?</a></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

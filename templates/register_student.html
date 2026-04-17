@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Student Registration – PlaceHub{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8 col-lg-7">
+    <div class="pp-card">
+      <div class="pp-card-icon-header" style="background: linear-gradient(135deg,#2196f3,#21cbf3)"><i class="bi bi-person-plus-fill fs-1"></i></div>
+      <div class="card-body p-4 p-md-5">
+        <h4 class="fw-bold mb-1">Student Registration</h4>
+        <p class="text-muted small mb-4">Create your student account to explore placement drives</p>
+        <form method="POST">
+          <div class="row g-3">
+            <div class="col-12"><h6 class="pp-section-label">Account Details</h6></div>
+            <div class="col-md-6"><label class="form-label pp-label">Email *</label><input type="email" name="email" class="form-control" required></div>
+            <div class="col-md-6"><label class="form-label pp-label">Password *</label><input type="password" name="password" class="form-control" required minlength="6"></div>
+            <div class="col-12 mt-2"><h6 class="pp-section-label">Personal Details</h6></div>
+            <div class="col-md-6"><label class="form-label pp-label">Full Name *</label><input type="text" name="full_name" class="form-control" required></div>
+            <div class="col-md-6"><label class="form-label pp-label">Roll Number *</label><input type="text" name="roll_number" class="form-control" required></div>
+            <div class="col-md-6"><label class="form-label pp-label">Branch</label><select name="branch" class="form-select"><option value="">Select</option><option>Computer Science</option><option>Information Technology</option><option>Electronics & Communication</option><option>Electrical Engineering</option><option>Mechanical Engineering</option><option>Civil Engineering</option><option>Other</option></select></div>
+            <div class="col-md-3"><label class="form-label pp-label">Year of Passing</label><input type="number" name="year_of_passing" class="form-control" min="2020" max="2030"></div>
+            <div class="col-md-3"><label class="form-label pp-label">CGPA</label><input type="number" name="cgpa" class="form-control" step="0.01" min="0" max="10"></div>
+            <div class="col-md-6"><label class="form-label pp-label">Phone</label><input type="tel" name="phone" class="form-control"></div>
+            <div class="col-md-6"><label class="form-label pp-label">Skills</label><input type="text" name="skills" class="form-control" placeholder="Python, SQL, ..."></div>
+            <div class="col-12 mt-2"><button type="submit" class="btn pp-btn-primary px-5"><i class="bi bi-person-check me-2"></i>Create Account</button><a href="{{ url_for('login') }}" class="btn btn-link ms-2">Already have an account?</a></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

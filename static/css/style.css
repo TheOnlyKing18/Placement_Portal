@@ -1,0 +1,64 @@
+:root {
+  --pp-primary: #2563eb;
+  --pp-primary-dk: #1d4ed8;
+  --pp-accent: #f59e0b;
+  --pp-green: #10b981;
+  --pp-red: #ef4444;
+  --pp-purple: #8b5cf6;
+  --pp-bg: #f8fafc;
+  --pp-card-bg: #ffffff;
+  --pp-border: #e2e8f0;
+  --pp-text: #1e293b;
+  --pp-muted: #64748b;
+  --pp-navbar-bg: #0f172a;
+  --pp-radius: 12px;
+  --pp-shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 16px rgba(0,0,0,.06);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { font-family: 'Sora', sans-serif; background: var(--pp-bg); color: var(--pp-text); min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+h1,h2,h3,h4,h5,h6 { font-family: 'Sora', sans-serif; letter-spacing: -.02em; }
+.pp-navbar { background: var(--pp-navbar-bg); border-bottom: 1px solid rgba(255,255,255,.06); padding: .75rem 0; }
+.pp-brand { font-weight: 700; font-size: 1.25rem; color: #fff !important; }
+.pp-navbar .nav-link { color: rgba(255,255,255,.75) !important; font-size: .875rem; font-weight: 500; padding: .4rem .75rem !important; border-radius: 8px; transition: background .15s; }
+.pp-navbar .nav-link:hover { color: #fff !important; background: rgba(255,255,255,.1); }
+.pp-role-badge { display: inline-flex; align-items: center; background: rgba(255,255,255,.08); color: rgba(255,255,255,.85); font-size: .8rem; padding: .35rem .75rem; border-radius: 20px; border: 1px solid rgba(255,255,255,.1); }
+.pp-btn-logout { background: rgba(239,68,68,.15); color: #fca5a5 !important; border: 1px solid rgba(239,68,68,.3); font-size: .8rem; padding: .35rem .9rem; border-radius: 8px; text-decoration: none; transition: background .15s; }
+.pp-btn-logout:hover { background: rgba(239,68,68,.25); color: #fff !important; }
+.pp-card { background: var(--pp-card-bg); border: 1px solid var(--pp-border); border-radius: var(--pp-radius); box-shadow: var(--pp-shadow); overflow: hidden; }
+.pp-card-header { background: #f1f5f9; border-bottom: 1px solid var(--pp-border); font-weight: 600; font-size: .9rem; padding: .85rem 1.25rem; }
+.pp-card-icon-header { background: linear-gradient(135deg, var(--pp-primary), #7c3aed); color: white; text-align: center; padding: 2rem; }
+.pp-stat-card { border-radius: var(--pp-radius); padding: 1.25rem 1.5rem; position: relative; overflow: hidden; border: 1px solid transparent; }
+.pp-stat-card::before { content: ''; position: absolute; top: -20px; right: -20px; width: 80px; height: 80px; border-radius: 50%; opacity: .12; background: currentColor; }
+.pp-stat-icon { font-size: 1.5rem; margin-bottom: .5rem; opacity: .8; }
+.pp-stat-num { font-size: 2rem; font-weight: 700; line-height: 1; letter-spacing: -.03em; }
+.pp-stat-label { font-size: .8rem; font-weight: 500; opacity: .75; margin-top: .25rem; }
+.pp-stat-blue { background:#eff6ff; color:var(--pp-primary); border-color:#bfdbfe; }
+.pp-stat-orange { background:#fff7ed; color:#ea580c; border-color:#fed7aa; }
+.pp-stat-green { background:#f0fdf4; color:var(--pp-green); border-color:#bbf7d0; }
+.pp-stat-purple { background:#faf5ff; color:var(--pp-purple); border-color:#ddd6fe; }
+.pp-stat-red { background:#fef2f2; color:var(--pp-red); border-color:#fecaca; }
+.pp-btn-primary { background: var(--pp-primary); color: #fff; border: none; border-radius: 8px; font-weight: 600; font-size: .875rem; padding: .5rem 1.25rem; transition: background .15s, transform .1s; text-decoration: none; display: inline-flex; align-items: center; }
+.pp-btn-primary:hover { background: var(--pp-primary-dk); transform: translateY(-1px); }
+.pp-btn-approve { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; border-radius: 6px; font-size: .8rem; font-weight: 600; padding: .3rem .7rem; text-decoration: none; display: inline-flex; align-items: center; gap: .25rem; }
+.pp-btn-danger { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; border-radius: 6px; font-size: .8rem; font-weight: 600; padding: .3rem .7rem; text-decoration: none; display: inline-flex; align-items: center; gap: .25rem; }
+.pp-btn-applied { background: #f0fdf4; color: var(--pp-green); border: 1px solid #bbf7d0; border-radius: 6px; font-size: .8rem; font-weight: 600; cursor: default; }
+.pp-table { font-size: .875rem; border-collapse: collapse; }
+.pp-table thead th { background: #f8fafc; font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; color: var(--pp-muted); border-bottom: 1px solid var(--pp-border); padding: .75rem 1rem; }
+.pp-table tbody td { padding: .75rem 1rem; border-bottom: 1px solid var(--pp-border); vertical-align: middle; }
+.pp-drive-card { background: var(--pp-card-bg); border: 1px solid var(--pp-border); border-radius: var(--pp-radius); padding: 1.25rem; height: 100%; transition: box-shadow .2s, transform .2s; }
+.pp-drive-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,.1); transform: translateY(-2px); }
+.pp-drive-applied { border-color: #bbf7d0; background: #f0fdf4; }
+.pp-drive-company { font-size: .75rem; font-weight: 600; text-transform: uppercase; color: var(--pp-primary); margin-bottom: .35rem; }
+.pp-drive-title { font-size: 1rem; font-weight: 700; margin-bottom: .25rem; }
+.pp-meta-chip { display: inline-flex; align-items: center; gap: .2rem; font-size: .72rem; font-weight: 600; padding: .2rem .55rem; border-radius: 20px; }
+.pp-chip-green { background:#dcfce7; color:#166534; }
+.pp-chip-blue { background:#dbeafe; color:#1e40af; }
+.pp-chip-orange { background:#ffedd5; color:#9a3412; }
+.pp-chip-gray { background:#f1f5f9; color:#475569; }
+.pp-label { font-weight: 600; font-size: .8rem; color: var(--pp-muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: .35rem; }
+.pp-section-label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--pp-primary); border-bottom: 2px solid var(--pp-border); padding-bottom: .35rem; margin-bottom: .5rem; }
+.pp-avatar-circle { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--pp-primary), #7c3aed); color: white; font-size: 2rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.pp-profile-item { font-size: .875rem; padding: .35rem 0; border-bottom: 1px solid var(--pp-border); }
+.pp-error-code { font-size: 7rem; font-weight: 800; letter-spacing: -.05em; background: linear-gradient(135deg, var(--pp-primary), #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }

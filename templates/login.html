@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Login – PlaceHub{% endblock %}
+{% block content %}
+<div class="row justify-content-center min-vh-70 align-items-center">
+  <div class="col-md-5 col-lg-4">
+    <div class="pp-card text-center mb-4">
+      <div class="pp-card-icon-header"><i class="bi bi-mortarboard-fill fs-1"></i></div>
+      <div class="card-body p-4">
+        <h4 class="fw-bold mb-1">Welcome Back</h4>
+        <p class="text-muted small mb-4">Sign in to PlaceHub</p>
+        <form method="POST">
+          <div class="mb-3 text-start">
+            <label class="form-label pp-label">Email Address</label>
+            <input type="email" name="email" class="form-control" placeholder="you@example.com" required>
+          </div>
+          <div class="mb-4 text-start">
+            <label class="form-label pp-label">Password</label>
+            <input type="password" name="password" class="form-control" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="btn pp-btn-primary w-100"><i class="bi bi-box-arrow-in-right me-2"></i>Sign In</button>
+        </form>
+        <hr class="my-4">
+        <p class="small text-muted mb-2">New here?</p>
+        <div class="d-grid gap-2">
+          <a href="{{ url_for('register_student') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-person-plus me-1"></i>Register as Student</a>
+          <a href="{{ url_for('register_company') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-building-add me-1"></i>Register as Company</a>
+        </div>
+        <div class="mt-4 p-3 bg-light rounded-3 text-start"><p class="small fw-semibold mb-1 text-muted"><i class="bi bi-info-circle me-1"></i>Demo Admin</p><p class="small mb-0 font-monospace">admin@placement.com / admin123</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
